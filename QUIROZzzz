@@ -5,3 +5,9 @@ cp dragonite/config.toml.example dragonite/config.toml
 nano dragonite/config.toml
 cp admin/config.toml.example admin/config.toml
 nano admin/config.toml
+cd dragonite
+pm2 start ./dragonite-linux-amd64 --name dragonite -o "/dev/null"
+cd ..
+cd admin
+pm2 start ./admin-linux-amd64 --name dragonite-admin
+cd ..
